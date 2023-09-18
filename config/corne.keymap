@@ -72,5 +72,57 @@
             >;
         };
     };
-};
 
+    // combos
+    combos {
+        compatible = "zmk, combos"
+
+        // [
+        combo_lbkt {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp LBKT>;
+            layers = <0>;
+        };
+
+        // ]
+        combo_rbkt {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&kp RBKT>;
+            layers = <0>;
+        };
+
+        // {
+        combo_lbrc {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp LBRC>;
+            layers = <0>;
+        };
+
+        // }
+        combo_rbrc {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp RBRC>;
+            layers = <0>;
+        };
+
+        // (
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <4 5>;
+            bindings = <&kp LPAR>;
+            layers = <0>;
+        };
+
+        // )
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp RPAR>;
+            layers = <0>;
+        };
+    };
+};

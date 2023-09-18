@@ -9,6 +9,52 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        lbkt {
+            bindings = <&kp LBKT>;
+            key-positions = <28 29>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        rbkt {
+            bindings = <&kp RBKT>;
+            key-positions = <30 31>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        lbrc {
+            bindings = <&kp LBRC>;
+            key-positions = <16 17>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        rbrc {
+            bindings = <&kp RBRC>;
+            key-positions = <18 19>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        lpar {
+            bindings = <&kp LPAR>;
+            key-positions = <4 5>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        rpar {
+            bindings = <&kp RPAR>;
+            key-positions = <6 7>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -50,10 +96,10 @@
             //                    | GUI | MO3 | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1     &kp N2     &kp N3     &kp N4    &kp N5               &kp N6     &kp N7    &kp N8     &kp N9    &kp N0     &kp BSPC
-&kp LCTRL  &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT            &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR   &trans
-&kp LSHFT  &kp GRAVE  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT             &kp LBRC   &kp RBRC  &kp UNDER  &kp PLUS  &kp TILDE  &trans
-                                 &kp LGUI   &mo 3     &kp SPACE            &kp RET    &trans    &kp RALT
+&kp TAB    &kp N1     &kp N2     &kp N3     &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9    &kp N0     &kp BSPC
+&kp LCTRL  &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR   &trans
+&kp LSHFT  &kp GRAVE  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT     &kp LBRC   &kp RBRC  &kp UNDER  &kp PLUS  &kp TILDE  &trans
+                                 &kp LGUI   &mo 3     &kp SPACE    &kp RET    &trans    &kp RALT
             >;
         };
 

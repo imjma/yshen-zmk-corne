@@ -45,7 +45,8 @@ configured in four ways: tap, hold, double tap, tap+hold.
 
 Tapping term: 200ms, 150-200ms delay for me is okay, but YMMV.
 
-> I use only one hold-tap for corne, which is Esc/Ctrl.
+> I use only one hold-tap for corne, which is Esc/Ctrl. Combos for Esc is
+> also an option, inside vim you can use `C-[` as Esc.
 > For the sweep (34 keys), many more are used (homerow mods + layer-tap).
 > The idea of Hold-Tap behavior and Homerow mods is awesome, but in
 > practice, it requires finicky timing. Check
@@ -65,22 +66,32 @@ Tapping term: 200ms, 150-200ms delay for me is okay, but YMMV.
 | Tab  | MO1    |
 | BSPC | MO2    |
 
-## Combos
+## Macros & Combos
 
-| Combos | Output  |
-| ------ | ------- |
-| vb     | [       |
-| nm     | ]       |
-| fg     | {       |
-| hj     | }       |
-| rt     | (       |
-| yu     | )       |
-| qw     | Esc     |
-| as     | C-S-Tab |
-| df     | C-Tab   |
-| zx     | C-SPC   |
+Some are borrowed from my sofle, not for this repo.
 
-C-Tab, C-S-Tab and C-SPC are defined as macros.
+| Macros | Definition |
+| ------ | ---------- |
+| M0     | C-Tab      |
+| M1     | C-S-Tab    |
+| M2     | C-SPC      |
+| M3     | email      |
+| M4     | mobile     |
+
+| Combos | Output |
+| ------ | ------ |
+| vb     | [      |
+| nm     | ]      |
+| fg     | {      |
+| hj     | }      |
+| rt     | (      |
+| yu     | )      |
+| qw     | Esc    |
+| as     | M1     |
+| df     | M0     |
+| zx     | M2     |
+| em     | M3     |
+| mo     | M4     |
 
 ## Resources
 

@@ -68,7 +68,7 @@ Tapping term: 200ms, 150-200ms delay for me is okay, but YMMV.
 
 ## Macros & Combos
 
-Some are borrowed from my sofle, not for this repo.
+M3 and M4 are not set in this repo.
 
 | Macros | Definition |
 | ------ | ---------- |
@@ -87,8 +87,8 @@ Some are borrowed from my sofle, not for this repo.
 | rt     | (      |
 | yu     | )      |
 | qw     | Esc    |
-| as     | M1     |
 | df     | M0     |
+| as     | M1     |
 | zx     | M2     |
 | em     | M3     |
 | mo     | M4     |
@@ -99,3 +99,4 @@ Some are borrowed from my sofle, not for this repo.
 - [ZMK Docs](https://zmk.dev/docs)
 - [urob](https://github.com/urob/zmk-config) -- Timeless homerow mods
 - [Miryoku ZMK](https://github.com/manna-harbour/miryoku_zmk) -- 5x3+3, 36 keys
+- [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)

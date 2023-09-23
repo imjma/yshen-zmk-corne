@@ -108,7 +108,7 @@
 &kp TAB        &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &mt LCTRL ESC  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                             &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+                             &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp LALT
             >;
         };
 
@@ -123,7 +123,7 @@
 &kp CAPSLOCK  &kp F1           &kp F2        &kp F3      &kp F4                &kp F5                  &kp F6     &kp F7    &kp F8     &kp F9     &kp F10  &kp DELETE
 &kp LCTRL     &kp C_VOLUME_UP  &kp C_VOL_DN  &kp K_MUTE  &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC    &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &kp F11  &trans
 &kp LSHFT     &kp C_PREV       &kp C_NEXT    &kp C_PLAY  &bt BT_PRV            &bt BT_NXT              &kp HOME   &kp END   &kp PG_UP  &kp PG_DN  &kp F12  &trans
-                                             &kp LGUI    &trans                &kp RETURN              &kp SPACE  &mo 3     &kp RALT
+                                             &kp LGUI    &trans                &kp RETURN              &kp SPACE  &mo 3     &kp LALT
             >;
         };
 
@@ -138,7 +138,7 @@
 &kp TAB    &kp N1     &kp N2     &kp N3     &kp N4    &kp N5       &kp N6     &kp N7    &kp N8     &kp N9    &kp N0     &kp BSPC
 &kp LCTRL  &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR   &trans
 &kp LSHFT  &kp GRAVE  &kp MINUS  &kp UNDER  &kp LBKT  &kp RBKT     &kp LBRC   &kp RBRC  &kp EQUAL  &kp PLUS  &kp TILDE  &trans
-                                 &kp LGUI   &mo 3     &kp SPACE    &kp RET    &trans    &kp RALT
+                                 &kp LGUI   &mo 3     &kp SPACE    &kp RET    &trans    &kp LALT
             >;
         };
 

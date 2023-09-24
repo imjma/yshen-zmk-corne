@@ -22,23 +22,21 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             global-quick-tap;
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
     };
 
-    macros {
-        // todo
-        macro_todo : macro_todo {
-            label = "macro_todo";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE>;
-        };
-    };
+    // macros {
+    //     // todo
+    //     macro_todo : macro_todo {
+    //         label = "macro_todo";
+    //         compatible = "zmk,behavior-macro";
+    //         #binding-cells = <0>;
+    //         wait-ms = <10>;
+    //         tap-ms = <10>;
+    //         bindings = <&kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE>;
+    //     };
+    // };
 
     combos {
         compatible = "zmk,combos";

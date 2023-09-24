@@ -113,12 +113,12 @@
             layers = <0>;
         };
 
-        combo_todo {
-            bindings = <&macro_todo>;
-            key-positions = <17 18>; // gh
-            timeout-ms = <50>;
-            layers = <0>;
-        };
+        // combo_todo {
+        //     bindings = <&macro_todo>;
+        //     key-positions = <17 18>; // gh
+        //     timeout-ms = <50>;
+        //     layers = <0>;
+        //  };
     };
 
     keymap {

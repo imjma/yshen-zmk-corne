@@ -68,8 +68,6 @@ Tapping term: 200ms, 150-200ms delay for me is okay, but YMMV.
 
 ## Macros & Combos
 
-M3 and M4 are not set in this repo.
-
 | Macros | Definition |
 | ------ | ---------- |
 | M0     | C-Tab      |

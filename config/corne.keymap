@@ -28,18 +28,6 @@
         };
     };
 
-    // macros {
-    //     // todo
-    //     macro_todo : macro_todo {
-    //         label = "macro_todo";
-    //         compatible = "zmk,behavior-macro";
-    //         #binding-cells = <0>;
-    //         wait-ms = <10>;
-    //         tap-ms = <10>;
-    //         bindings = <&kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE>;
-    //     };
-    // };
-
     combos {
         compatible = "zmk,combos";
 
@@ -115,24 +103,17 @@
 
         combo_todo {
             bindings = <&macro_todo>;
-            key-positions = <17 18>;
+            key-positions = <17 18>; // gh
             layers = <0>;
             timeout-ms = <50>;
         };
 
         combo_email {
             bindings = <&macro_email>;
-            key-positions = <3 31>;
+            key-positions = <3 31>; // em
             timeout-ms = <50>;
             layers = <0>;
         };
-
-        // combo_todo {
-        //     bindings = <&macro_todo>;
-        //     key-positions = <17 18>; // gh
-        //     timeout-ms = <50>;
-        //     layers = <0>;
-        //  };
     };
 
     macros {
@@ -140,8 +121,9 @@
             compatible = "zmk,behavior-macro";
             label = "MACRO_TODO";
             #binding-cells = <0>;
-            bindings = <&kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp LBRC &kp SPACE>;
+            bindings = <&kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE>;
         };
+
         macro_email: macro_email {
             compatible = "zmk,behavior-macro";
             label = "MACRO_EMAIL";

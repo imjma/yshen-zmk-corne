@@ -77,6 +77,7 @@ M3 and M4 are not set in this repo.
 | M2     | C-SPC      |
 | M3     | email      |
 | M4     | mobile     |
+| M5     | - [ ]      |
 
 | Combos | Output |
 | ------ | ------ |
@@ -92,6 +93,7 @@ M3 and M4 are not set in this repo.
 | zx     | M2     |
 | em     | M3     |
 | mo     | M4     |
+| gh     | M5     |
 
 ## Resources
 

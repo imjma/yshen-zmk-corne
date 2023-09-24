@@ -28,69 +28,96 @@
         };
     };
 
+    macros {
+        // todo
+        macro_todo : macro_todo {
+            label = "macro_todo";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
         combo_lbkt {
             bindings = <&kp LBKT>;
-            key-positions = <28 29>;
+            key-positions = <28 29>; // vb
             timeout-ms = <50>;
             layers = <0>;
         };
 
         combo_rbkt {
             bindings = <&kp RBKT>;
-            key-positions = <30 31>;
+            key-positions = <30 31>; // nm
             timeout-ms = <50>;
             layers = <0>;
         };
 
         combo_lbrc {
             bindings = <&kp LBRC>;
-            key-positions = <16 17>;
+            key-positions = <16 17>; // fg
             timeout-ms = <50>;
             layers = <0>;
         };
 
         combo_rbrc {
             bindings = <&kp RBRC>;
-            key-positions = <18 19>;
+            key-positions = <18 19>; // hj
             timeout-ms = <50>;
             layers = <0>;
         };
 
         combo_lpar {
             bindings = <&kp LPAR>;
-            key-positions = <4 5>;
+            key-positions = <4 5>; // rt
             timeout-ms = <50>;
             layers = <0>;
         };
 
         combo_rpar {
             bindings = <&kp RPAR>;
-            key-positions = <6 7>;
+            key-positions = <6 7>; // yu
             timeout-ms = <50>;
             layers = <0>;
         };
 
         combo_c_spc {
             bindings = <&kp LC(SPACE)>;
-            key-positions = <25 26>;
+            key-positions = <25 26>; // zx
+            timeout-ms = <50>;
+            layers = <0>;
         };
 
-        combo_next_tab {
+        combo_tab_next{
             bindings = <&kp LC(TAB)>;
-            key-positions = <15 16>;
+            key-positions = <15 16>; // df
+            timeout-ms = <50>;
+            layers = <0>;
         };
 
-        combo_prev_tab {
+        combo_tab_prev {
             bindings = <&kp LC(LS(TAB))>;
-            key-positions = <13 14>;
+            key-positions = <13 14>; // as
+            timeout-ms = <50>;
+            layers = <0>;
         };
 
         combo_esc {
             bindings = <&kp ESC>;
-            key-positions = <1 2>;
+            key-positions = <1 2>; // qw
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        combo_todo {
+            bindings = <¯o_todo>;
+            key-positions = <17 18>; // gh
+            timeout-ms = <50>;
+            layers = <0>;
         };
     };
 

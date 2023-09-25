@@ -121,6 +121,8 @@
             compatible = "zmk,behavior-macro";
             label = "MACRO_TODO";
             #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings = <&kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE>;
         };
 
@@ -128,6 +130,8 @@
             compatible = "zmk,behavior-macro";
             label = "MACRO_EMAIL";
             #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings = <&kp Y &kp S &kp H &kp E &kp N &kp F &kp A &kp B &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
     };

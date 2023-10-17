@@ -9,10 +9,8 @@
 #include <dt-bindings/zmk/keys.h>
 
 // Home row mods macro (ACGS)
-// #define HRML(k1,k2,k3,k4) &ht LALT k1  &ht LCTRL k2  &ht LGUI k3  &ht LSHFT k4
-// #define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RGUI k2  &ht RCTRL k3  &ht RALT k4
-#define HRML(k1,k2,k3,k4) &mt LALT k1  &mt LCTRL k2  &mt LGUI k3  &mt LSHFT k4
-#define HRMR(k1,k2,k3,k4) &mt RSHFT k1  &mt RGUI k2  &mt RCTRL k3  &mt RALT k4
+#define HRML(k1,k2,k3,k4) &thm LALT k1  &thm LCTRL k2  &thm LGUI k3  &thm LSHFT k4
+#define HRMR(k1,k2,k3,k4) &thm RSHFT k1  &thm RGUI k2  &thm RCTRL k3  &thm RALT k4
 
 / {
     behaviors {
@@ -24,9 +22,20 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             global-quick-tap;
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        // timeless homerow mods
+        thm: timeless_homerow_mods {
+            label = "timeless_homerow_mods";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>; // repeat on tap-into-hold
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release; // delay positional check until key-release
         };
     };
 

@@ -8,14 +8,6 @@ My split keyboards.
 | Corne    | 6x3+3  | 42 (40%)    |
 | Sweep    | 5x3+2  | 34 (30%)    |
 
-Sofle was my first split keyboard, but I didn't use it for long.
-
-Reasons for switching to corne and sweep
-
-1. Sofle has two encoders, but I barely use them. (actually I use sofle as a corne)
-2. I don't need five thumb keys, two or three is enough. (currently I prefer three)
-3. My sofle is not wireless. (my corne and sweep support bluetooth)
-
 ## My Corne Layout
 
 Layer 0 --- Base (Default Layer)
@@ -45,24 +37,25 @@ configured in four ways: tap, hold, double tap, tap+hold.
 
 Tapping term: 200ms, 150-200ms delay for me is okay, but YMMV.
 
-> I use only one hold-tap for corne, which is Esc/Ctrl. Combos for Esc is
-> also an option, inside vim you can use `C-[` as Esc.
+> For a 3x6 corne, only one hold-tap needs to be set, which is Esc/Ctrl.
+> Combos for Esc is also an option, inside vim you can use `C-[` as Esc.
 > For the sweep (34 keys), many more are used (homerow mods + layer-tap).
 > The idea of Hold-Tap behavior and Homerow mods is awesome, but in
 > practice, it requires finicky timing. Check
 > [urob](https://github.com/urob/zmk-config) for timeless homerow mods.
+> BTW, I use ACGS as home row mods for MacOS.
 
 | Tap  | Hold   |
 | ---- | ------ |
 | Esc  | LCtrl  |
-| A    | LShift |
+| A    | LAlt   |
 | S    | LCtrl  |
-| D    | LAlt   |
-| F    | LGui   |
-| J    | RGui   |
-| K    | RAlt   |
+| D    | LGui   |
+| F    | LShift |
+| J    | RShift |
+| K    | RGui   |
 | L    | RCtrl  |
-| ;    | RShift |
+| ;    | RAlt   |
 | Tab  | MO1    |
 | BSPC | MO2    |
 

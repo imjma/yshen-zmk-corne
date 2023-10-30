@@ -44,3 +44,5 @@ endchoice
 endif # LVGL
 
 endif
+
+rsource "src/display/widgets/Kconfig"

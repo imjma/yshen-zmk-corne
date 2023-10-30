@@ -3,17 +3,17 @@
 #include <zephyr/logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
+#include <zmk/ble.h>
 #include <zmk/display.h>
+#include <zmk/endpoints.h>
 #include <zmk/event_manager.h>
 #include <zmk/events/ble_active_profile_changed.h>
+#include <zmk/events/endpoint_changed.h>
+// #include <zmk/events/endpoint_selection_changed.h>
 #include <zmk/events/usb_conn_state_changed.h>
+#include <zmk/usb.h>
 
 #include "headers/output_status.h"
-// #include <zmk/events/endpoint_selection_changed.h>
-#include <zmk/ble.h>
-#include <zmk/endpoints.h>
-#include <zmk/events/endpoint_changed.h>
-#include <zmk/usb.h>
 
 LV_IMG_DECLARE(bluetooth_advertising);
 LV_IMG_DECLARE(bluetooth_connected_right);
@@ -33,7 +33,7 @@ LV_IMG_DECLARE(USB_connected);
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
 struct output_status_state {
-  enum zmk_endpoint selected_endpoint;
+  enum zmk_endpoint_changed selected_endpoint;
   bool active_profile_connected;
   bool active_profile_bonded;
   uint8_t active_profile_index;

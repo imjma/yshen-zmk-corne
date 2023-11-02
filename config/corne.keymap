@@ -91,7 +91,7 @@
         };
 
         // C-SPC
-        combo_tab_next {
+        combo_c_spc {
             bindings = <&kp LC(SPACE)>;
             key-positions = <19 20>; // jk
             timeout-ms = <50>;

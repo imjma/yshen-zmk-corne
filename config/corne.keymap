@@ -31,10 +31,23 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <230>; // default: 280
-            quick-tap-ms = <175>; // repeat on tap-into-hold
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <200>; // repeat on quick tap+hold
+            require-prior-idle-ms = <125>; // disable hold-tap when typing quickly, remove input delay
             bindings = <&kp>, <&kp>;
+            hold-trigger-on-release; // delay positional check until key-release
+        };
+
+        // layer-tap for thumb keys
+        mlt: my_layer_tap {
+            label = "my_layer_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <230>;
+            quick-tap-ms = <200>; // repeat on tap-into-hold
+            require-prior-idle-ms = <125>;
+            bindings = <&mo>, <&kp>;
             hold-trigger-on-release; // delay positional check until key-release
         };
     };
@@ -222,7 +235,8 @@
 &mt LCTRL ESC  &thm LALT A  &thm LCTRL S  &thm LGUI D  &thm LSHFT F &kp G        &kp H   &thm RSHFT J  &thm RGUI K  &thm RCTRL L  &thm RALT SEMI &kp SQT
 &kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
                           // &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp LALT
-                         &mt LGUI ESC  &lt 1 TAB  &kp SPACE    &kp RET  &lt 2 BSPC  &mt LALT DEL
+                         //&mt LGUI ESC  &lt 1 TAB  &kp SPACE    &kp RET  &lt 2 BSPC  &mt LALT DEL
+                         &mt LGUI ESC  &mlt 1 TAB  &kp SPACE    &kp RET  &mlt 2 BSPC  &thm LALT DEL
             >;
         };
 

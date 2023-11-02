@@ -10,7 +10,7 @@ My split keyboards.
 
 ![My split keyboards](./img/my_keyboards.png)
 
-The batman keyboard is a variant of [cocot46plus](https://github.com/aki27kbd/cocot46plus).
+The bat keyboard is a variant of [cocot46plus](https://github.com/aki27kbd/cocot46plus).
 
 ## My Corne Layout
 
@@ -60,31 +60,39 @@ I use almost the same keymaps for all my keyboards.
 
 ## Macros & Combos
 
+Zmk use key positions for combos, the 36 key matirx is defined as
+![36 key matrix](./img/keypos_36keys.png)
+
 | Macros | Definition           |
 | ------ | -------------------- |
-| email  | <yshenfab@gmail.com> |
+| email  | `yshenfab@gmail.com` |
 | todo   | - [ ]                |
 | mobile | my number            |
 
-| Combos | Output  |
-| ------ | ------- |
-| qw     | Esc     |
-| vb     | [       |
-| nm     | ]       |
-| fg     | {       |
-| hj     | }       |
-| rt     | (       |
-| yu     | )       |
-| xc     | -       |
-| cv     | \_      |
-| m,     | =       |
-| ,.     | +       |
-| df     | C-Tab   |
-| as     | C-S-Tab |
-| zx     | C-SPC   |
-| em     | email   |
-| gh     | todo    |
-| mo     | mobile  |
+I didn't put my number in this repo, if you have any private info, just build the
+firmware locally.
+
+| Combos | Output  | qwerty keys |
+| ------ | ------- | ----------- |
+| 0 1    | Esc     | qw          |
+| 3 4    | (       | rt          |
+| 5 6    | )       | yu          |
+| 13 14  | {       | fg          |
+| 15 16  | }       | hj          |
+| 23 24  | [       | vb          |
+| 25 26  | ]       | nm          |
+| 20 21  | `       | zx          |
+| 21 22  | -       | xc          |
+| 22 23  | \_      | cv          |
+| 26 27  | =       | m,          |
+| 27 28  | +       | ,.          |
+| 28 29  | ~       | ./          |
+| 10 11  | C-SPC   | as          |
+| 11 12  | C-S-Tab | sd          |
+| 12 13  | C-Tab   | df          |
+| 2 26   | email   | em          |
+| 14 15  | todo    | gh          |
+| 26 8   | mobile  | mo          |
 
 ## Resources
 

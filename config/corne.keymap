@@ -103,10 +103,34 @@
             layers = <0>;
         };
 
+        // C-LEFT
+        combo_c_left {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <19 20>; // jk
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        // C-RIGHT
+        combo_c_right {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <20 21>; // kl
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
         // C-SPC
         combo_c_spc {
             bindings = <&kp LC(SPACE)>;
-            key-positions = <19 20>; // jk
+            key-positions = <13 14>; // as
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        // C-S-TAB
+        combo_tab_prev {
+            bindings = <&kp LC(LS(TAB))>;
+            key-positions = <14 15>; // sd
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -115,14 +139,6 @@
         combo_tab_next {
             bindings = <&kp LC(TAB)>;
             key-positions = <15 16>; // df
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        // C-S-TAB
-        combo_tab_prev {
-            bindings = <&kp LC(LS(TAB))>;
-            key-positions = <13 14>; // as
             timeout-ms = <50>;
             layers = <0>;
         };

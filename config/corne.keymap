@@ -41,9 +41,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <230>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>; // repeat on quick tap+hold
-            require-prior-idle-ms = <125>; // disable hold-tap when typing quickly, remove input delay
+            require-prior-idle-ms = <120>; // disable hold-tap when typing quickly, remove input delay
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release; // delay positional check until key-release
         };
@@ -54,9 +54,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <230>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>; // repeat on tap-into-hold
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <120>; // disable hold-tap when typing quickly, remove input delay
             bindings = <&mo>, <&kp>;
             hold-trigger-on-release; // delay positional check until key-release
         };
@@ -239,13 +239,6 @@
             layers = <0>;
         };
 
-        combo_sustech {
-            bindings = <&sustech>;
-            key-positions = <14 7>; // su
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
         combo_sid {
             bindings = <&sid>;
             key-positions = <14 8>; // si
@@ -283,7 +276,7 @@
             bindings = <&kp LS(Y) &kp A &kp N &kp G &kp SPACE &kp LS(S) &kp H &kp E &kp N>;
         };
 
-        // University of Technology Sydney (UTS)
+        // University of Technology Sydney
         uts: uts {
             compatible = "zmk,behavior-macro";
             label = "UTS";
@@ -293,25 +286,7 @@
             bindings = <&kp LS(U) &kp N &kp I &kp V &kp E &kp R &kp S &kp I &kp T &kp Y &kp SPACE
                         &kp O &kp F &kp SPACE
                         &kp LS(T) &kp E &kp C &kp H &kp N &kp O &kp L &kp O &kp G &kp Y &kp SPACE
-                        &kp LS(S) &kp Y &kp D &kp N &kp E &kp Y &kp SPACE
-                        &kp LPAR &kp U &kp T &kp S &kp RPAR
-                >;
-        };
-
-        // Southern University of Science and Technology (SUSTech)
-        sustech: sustech {
-            compatible = "zmk,behavior-macro";
-            label = "SUSTech";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp LS(S) &kp O &kp U &kp T &kp H &kp E &kp R &kp N &kp SPACE
-                        &kp LS(U) &kp N &kp I &kp V &kp E &kp R &kp S &kp I &kp T &kp Y &kp SPACE
-                        &kp O &kp F &kp SPACE
-                        &kp LS(S) &kp C &kp I &kp E &kp N &kp C &kp E &kp SPACE
-                        &kp A &kp N &kp D &kp SPACE
-                        &kp LS(T) &kp E &kp C &kp H &kp N &kp O &kp L &kp O &kp G &kp Y &kp SPACE
-                        &kp LPAR &kp LS(S) &kp LS(U) &kp LS(S) &kp LS(T) &kp E &kp C &kp H &kp RPAR
+                        &kp LS(S) &kp Y &kp D &kp N &kp E &kp Y
                 >;
         };
 
@@ -393,14 +368,14 @@
 
         MACROS {
             // -----------------------------------------------------------------------------------------
-            // |   |    |       |email|     | todo |     |      | uts  | sid  |      |     |    |
-            // |   |    |sustech|     |     |      |     |      |      |      |      |     |    |
-            // |   |    |       |     |     |      |     | name |mobile|      |      |     |    |
-            //                  |     |     |      |     |      |      |      |
+            // |   |    |     |email|     | todo |     |      | uts  | sid  |      |     |    |
+            // |   |    |     |     |     |      |     |      |      |      |      |     |    |
+            // |   |    |     |     |     |      |     | name |      |      |      |     |    |
+            //                |     |     |      |     |      |      |      |
 
             bindings = <
 &trans  &trans  &trans   &email  &trans  &todo           &trans  &uts    &sid    &trans  &trans  &trans
-&trans  &trans  &sustech &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans   &trans  &trans  &trans          &name   &trans  &trans  &trans  &trans  &trans
                          &trans  &trans  &trans          &trans  &trans  &trans
             >;

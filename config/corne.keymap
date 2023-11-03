@@ -320,8 +320,8 @@
 
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &mkp LCLK   &mkp RCLK  &mmv SCROLL_UP &mmv SCROLL_DOWN  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &mkp LCLK   &mkp RCLK  &mwh SCROLL_UP &mwh SCROLL_DOWN  &trans  &trans
                         &trans  &trans  &trans          &trans  &trans  &trans
             >;
         };

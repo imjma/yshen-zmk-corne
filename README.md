@@ -1,6 +1,6 @@
 # zmk-config
 
-My split keyboards.
+## My split keyboards
 
 | Keyboard | Layout | Keys (Size) |
 | -------- | ------ | ----------- |
@@ -26,20 +26,24 @@ Layer 2 --- Numbers & Symbols
 
 ![Layer 2](./img/layer2-num-sym.png)
 
-Layer 3 --- Bluetooth & Number Pad
+Layer 3 --- Number Pad, Bluetooth & Mouse
 
-![Layer 3](./img/layer3-bt-num.png)
+![Layer 3](./img/layer3-num-bt-mouse.png)
+
+The mouse emulations include mouse left/down/up/right, mouse left/right click, and
+mouse scroll up/down.
+
+Layer 4 for macros (not necessary).
 
 ## Hold-Tap
 
 For a 6x3 corne, if you don't want too many hold-tap keys, only one hold-tap
-needs to be set, for example, Ctrl/Esc on the first column of left hand. For a
-5x3 sweep, many more hold-taps are used (homerow mods + layer-tap on thumb keys).
-I use almost the same keymaps for all my keyboards.
+needs to be set, for example, Ctrl/Esc on the first column of left hand.
+I use hold-taps for homerow mods and layer-tap on thumb keys.
 
 > The idea of hold-tap behavior and homerow mods is awesome, but in
 > practice, it requires finicky timing. Check
-> [urob](https://github.com/urob/zmk-config) for timeless homerow mods.
+> [urob](https://github.com/urob/zmk-config) for timer-less homerow mods.
 > BTW, I prefer ACGS as homerow (MacOS + shortcuts), but YMMV.
 
 | Hold   | Tap  |
@@ -56,48 +60,50 @@ I use almost the same keymaps for all my keyboards.
 | LGui   | Esc  |
 | MO1    | Tab  |
 | MO2    | BSPC |
-| LAlt   | DEL  |
+| MO4    | DEL  |
 
-## Macros & Combos
+## Combos
 
-Zmk use key positions for combos, the 36 key matirx is defined as
-![36 key matrix](./img/keypos_36keys.png)
+ZMK use key positions for combos.
+For a 6x3+3 corne, the 42 key matirx is defined as
+![42 key matrix](./img/keypos_42keys.png)
 
-| Macros | Definition           |
-| ------ | -------------------- |
-| email  | `yshenfab@gmail.com` |
-| todo   | - [ ]                |
-| mobile | my number            |
+Most combos are for symbols. I also use some combos for macros like todo, email,
+etc.
 
-I didn't put my number in this repo, if you have any private info, just build the
-firmware locally.
-
-| Combos | Output  | qwerty keys |
+| Combos | Output  | QWERTY keys |
 | ------ | ------- | ----------- |
-| 0 1    | Esc     | qw          |
-| 3 4    | (       | rt          |
-| 5 6    | )       | yu          |
-| 13 14  | {       | fg          |
-| 15 16  | }       | hj          |
-| 23 24  | [       | vb          |
-| 25 26  | ]       | nm          |
-| 20 21  | `       | zx          |
-| 21 22  | -       | xc          |
-| 22 23  | \_      | cv          |
-| 26 27  | =       | m,          |
-| 27 28  | +       | ,.          |
-| 28 29  | ~       | ./          |
-| 10 11  | C-SPC   | as          |
-| 11 12  | C-S-Tab | sd          |
-| 12 13  | C-Tab   | df          |
-| 2 26   | email   | em          |
-| 14 15  | todo    | gh          |
-| 26 8   | mobile  | mo          |
+| 1 2    | Esc     | qw          |
+| 4 5    | (       | rt          |
+| 6 7    | )       | yu          |
+| 16 17  | {       | fg          |
+| 18 19  | }       | hj          |
+| 28 29  | [       | vb          |
+| 30 31  | ]       | nm          |
+| 25 26  | `       | zx          |
+| 26 27  | -       | xc          |
+| 27 28  | \_      | cv          |
+| 31 32  | =       | m,          |
+| 32 33  | +       | ,.          |
+| 33 34  | ~       | ./          |
+| 13 14  | C-SPC   | as          |
+| 14 15  | C-S-Tab | sd          |
+| 15 16  | C-Tab   | df          |
+| 5 9    | todo    | to          |
+| 3 31   | email   | em          |
+
+## Mouse
+
+Since my keyboard doesn't have a trackball/trackpoint/touchpad/joystick, I have to
+use keys for mouse emulation.
+Check [urob's ZMK fork](https://github.com/urob/zmk) for mouse behaviors
+like mkp (mouse keypress), mmv (mouse move), mwh (mouse wheel).
 
 ## Resources
 
-- [My Sweep Config](https://github.com/yshenfab/zmk-sweep)
 - [ZMK Docs](https://zmk.dev/docs)
-- [urob](https://github.com/urob/zmk-config) -- Timeless homerow mods
-- [Miryoku ZMK](https://github.com/manna-harbour/miryoku_zmk) -- 5x3+3, 36 keys
+- [urob zmk-config](https://github.com/urob/zmk-config) -- Timer-less homerow mods
+- [urob's ZMK fork](https://github.com/urob/zmk)
+- [Miryoku ZMK](https://github.com/manna-harbour/miryoku_zmk)
+- [My Sweep Config](https://github.com/yshenfab/zmk-sweep)
 - [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)

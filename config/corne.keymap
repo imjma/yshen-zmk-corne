@@ -211,14 +211,14 @@
 
         // - [ ]
         combo_todo {
-            bindings = <&macro_todo>;
+            bindings = <&todo>;
             key-positions = <17 18>; // gh
             layers = <0>;
             timeout-ms = <50>;
         };
 
         combo_email {
-            bindings = <&macro_email>;
+            bindings = <&email>;
             key-positions = <3 31>; // em
             timeout-ms = <50>;
             layers = <0>;
@@ -226,18 +226,18 @@
     };
 
     macros {
-        macro_todo: macro_todo {
+        todo: todo {
             compatible = "zmk,behavior-macro";
-            label = "MACRO_TODO";
+            label = "TODO";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
             bindings = <&kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE>;
         };
 
-        macro_email: macro_email {
+        email: email {
             compatible = "zmk,behavior-macro";
-            label = "MACRO_EMAIL";
+            label = "EMAIL";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
@@ -260,8 +260,7 @@
 //&mt LCTRL ESC  HRML(A,    S,     D,        F) &kp G        &kp H   HRMR(J,     K,         L,       SEMI) &kp SQT
 &mt LCTRL ESC  &thm LALT A  &thm LCTRL S  &thm LGUI D  &thm LSHFT F &kp G        &kp H   &thm RSHFT J  &thm RGUI K  &thm RCTRL L  &thm RALT SEMI &kp SQT
 &kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                          // &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp LALT
-                         //&mt LGUI ESC  &lt 1 TAB  &kp SPACE    &kp RET  &lt 2 BSPC  &mt LALT DEL
+                         //&mt LGUI ESC  &mlt 1 TAB  &kp SPACE    &kp RET  &mlt 2 BSPC  &mt LALT DEL
                          &mt LGUI ESC  &mlt 1 TAB  &kp SPACE    &kp RET  &mlt 2 BSPC  &mlt 4 DEL
             >;
         };
@@ -296,32 +295,33 @@
             >;
         };
 
-        BT_NUM {
+        // use urob's zmk fork for mouse behaviros: mkp (mouse keypress), mmv (mouse move), mwh (mouse wheel)
+        NUMPAD_BT_MOUSE {
             // -----------------------------------------------------------------------------------------
-            // |   | RESET |     |     |     |        |   |  7  |  8  |  9  |  *  |  /  |    |
-            // |   | BTLDR |     |     |     | BT_CLR |   |  4  |  5  |  6  |  +  |  -  |    |
-            // |   | BT0   | BT1 | BT2 | BT3 | BT4    |   |  1  |  2  |  3  |  .  |  =  |    |
-            //                   | GUI |     | SPC    |   | ENT |     |  0  |
+            // |   | RESET  |  7  |  8  |  9  |     |   | BT0   | BT1   | BT2      | BT3        | BT4 |    |
+            // |   | BTLDR  |  4  |  5  |  6  |  0  |   | M_LFT | M_DWN | M_UP     | M_RGT      |     |    |
+            // |   | BT_CLR |  1  |  2  |  3  |     |   |  MB1  |  MB2  | WHEEL_UP | WHEEL_DOWN |     |    |
+            //                    | GUI |     | SPC |   | ENTER |       | ALT      |
 
             bindings = <
-&trans  &sys_reset    &trans        &trans        &trans        &trans          &kp N7  &kp N8  &kp N9  &kp ASTERISK  &kp SLASH  &trans
-&trans  &bootloader   &trans        &trans        &trans        &bt BT_CLR      &kp N4  &kp N5  &kp N6  &kp PLUS      &kp MINUS  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp N1  &kp N2  &kp N3  &kp PERIOD    &kp EQUAL  &trans
-                                    &trans        &trans        &trans          &trans  &trans  &kp N0
+&trans  &sys_reset   &kp N7  &kp N8  &kp N9  &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&trans  &bootloader  &kp N4  &kp N5  &kp N6  &kp N0        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT &trans  &trans
+&trans  &bt BT_CLR   &kp N1  &kp N2  &kp N3  &trans        &mkp LCLK   &mkp RCLK  &mwh SCROLL_UP &mwh SCROLL_DOWN  &trans  &trans
+                             &trans  &trans  &trans        &trans  &trans  &trans
             >;
         };
 
-        MOUSE {
+        MACRO_TEST {
             // -----------------------------------------------------------------------------------------
             // |   |      |     |     |     |     |   |     |     |        |        |     |    |
-            // |   |      |     |     |     |     |   | LFT | DWN | UP     | RGT    |     |    |
-            // |   |      |     |     |     |     |   | MB1 | MB2 | SCR_UP | SCR_DN |     |    |
+            // |   |      |     |     |     |     |   |     |     |        |        |     |    |
+            // |   |      |     |     |     |     |   |     |     |        |        |     |    |
             //                  |     |     |     |   |     |     |        |
 
             bindings = <
+&trans  &trans  &trans  &email  &trans  &todo           &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &mkp LCLK   &mkp RCLK  &mwh SCROLL_UP &mwh SCROLL_DOWN  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans          &trans  &trans  &trans
             >;
         };

@@ -42,7 +42,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>; // repeat on quick tap+hold
+            quick-tap-ms = <0>; // repeat on quick tap+hold
             require-prior-idle-ms = <120>; // disable hold-tap when typing quickly, remove input delay
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release; // delay positional check until key-release
@@ -55,7 +55,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>; // repeat on tap-into-hold
+            quick-tap-ms = <0>; // repeat on tap-into-hold
             require-prior-idle-ms = <120>; // disable hold-tap when typing quickly, remove input delay
             bindings = <&mo>, <&kp>;
             hold-trigger-on-release; // delay positional check until key-release

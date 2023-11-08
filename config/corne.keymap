@@ -42,7 +42,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>; // repeat on quick tap+hold
+            quick-tap-ms = <200>; // repeat on quick tap+hold
             require-prior-idle-ms = <120>; // disable hold-tap when typing quickly, remove input delay
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release; // delay positional check until key-release
@@ -55,7 +55,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>; // repeat on tap-into-hold
+            quick-tap-ms = <200>; // repeat on tap-into-hold
             require-prior-idle-ms = <120>; // disable hold-tap when typing quickly, remove input delay
             bindings = <&mo>, <&kp>;
             hold-trigger-on-release; // delay positional check until key-release
@@ -213,7 +213,7 @@
         // - [ ]
         combo_todo {
             bindings = <&todo>;
-            key-positions = <5 9>; // to
+            key-positions = <17 18>; // gh
             layers = <0>;
             timeout-ms = <50>;
         };
@@ -227,7 +227,7 @@
 
         combo_name {
             bindings = <&name>;
-            key-positions = <14 6>; // sy
+            key-positions = <6 14>; // sy
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -241,7 +241,7 @@
 
         combo_sid {
             bindings = <&sid>;
-            key-positions = <14 8>; // si
+            key-positions = <8 15>; // id
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -263,7 +263,7 @@
             label = "EMAIL";
             #binding-cells = <0>;
             wait-ms = <10>;
-            tap-ms = <10>;
+            tap-ms = <100>;
             bindings = <&kp Y &kp S &kp H &kp E &kp N &kp F &kp A &kp B &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
 
@@ -271,8 +271,8 @@
             compatible = "zmk,behavior-macro";
             label = "YS";
             #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&kp LS(Y) &kp A &kp N &kp G &kp SPACE &kp LS(S) &kp H &kp E &kp N>;
         };
 
@@ -281,7 +281,7 @@
             compatible = "zmk,behavior-macro";
             label = "UTS";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <100>;
             tap-ms = <10>;
             bindings = <&kp LS(U) &kp N &kp I &kp V &kp E &kp R &kp S &kp I &kp T &kp Y &kp SPACE
                         &kp O &kp F &kp SPACE

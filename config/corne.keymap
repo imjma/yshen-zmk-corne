@@ -262,8 +262,8 @@
             compatible = "zmk,behavior-macro";
             label = "EMAIL";
             #binding-cells = <0>;
-            wait-ms = <1>;
-            tap-ms = <1>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings = <&kp Y &kp S &kp H &kp E &kp N &kp F &kp A &kp B &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
 
@@ -281,8 +281,8 @@
             compatible = "zmk,behavior-macro";
             label = "UTS";
             #binding-cells = <0>;
-            wait-ms = <1>;
-            tap-ms = <1>;
+            wait-ms = <10>;
+            tap-ms = <10>;
             bindings = <&kp LS(U) &kp N &kp I &kp V &kp E &kp R &kp S &kp I &kp T &kp Y &kp SPACE
                         &kp O &kp F &kp SPACE
                         &kp LS(T) &kp E &kp C &kp H &kp N &kp O &kp L &kp O &kp G &kp Y &kp SPACE

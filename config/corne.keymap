@@ -35,9 +35,9 @@
             bindings = <&kp>, <&kp>;
         };
 
-        // timeless homerow mods
-        thm: timeless_homerow_mods {
-            label = "timeless_homerow_mods";
+        // timerless homerow mods
+        thm: timerless_homerow_mods {
+            label = "timerless_homerow_mods";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -312,10 +312,8 @@
 
             bindings = <
 &kp TAB        &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-//&mt LCTRL ESC  HRML(A,    S,     D,        F) &kp G        &kp H   HRMR(J,     K,         L,       SEMI) &kp SQT
-&mt LCTRL ESC  &thm LALT A  &thm LCTRL S  &thm LGUI D  &thm LSHFT F &kp G        &kp H   &thm RSHFT J  &thm RGUI K  &thm RCTRL L  &thm RALT SEMI &kp SQT
+&mt LCTRL ESC  HRML(A,    S,     D,        F) &kp G        &kp H   HRMR(J,     K,         L,       SEMI) &kp SQT
 &kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                         //&mt LGUI ESC  &mlt 1 TAB  &kp SPACE    &kp RET  &mlt 2 BSPC  &mt LALT DEL
                          &mt LGUI ESC  &mlt 1 TAB  &kp SPACE    &kp RET  &mlt 2 BSPC  &mlt 4 DEL
             >;
         };
@@ -366,18 +364,19 @@
             >;
         };
 
-        MACROS {
-            // -----------------------------------------------------------------------------------------
-            // |   |    |     |email|     | todo |     |      | uts  | sid  |      |     |    |
-            // |   |    |     |     |     |      |     |      |      |      |      |     |    |
-            // |   |    |     |     |     |      |     | name |      |      |      |     |    |
-            //                |     |     |      |     |      |      |      |
+        // numpad for right hand
+        NUMPAD {
+            // ----------------------------------------------------------------------------------------
+            // |   |   |   |   |   |   |      | 7 | 8 | 9 |   |   |   |
+            // |   |   |   |   |   |   |      | 4 | 5 | 6 | 0 |   |   |
+            // |   |   |   |   |   |   |      | 1 | 2 | 3 |   |   |   |
+           //              |GUI|   |SPC|      |ENT|   |   |
 
-            bindings = <
-&trans  &trans  &trans   &email  &trans  &todo           &trans  &uts    &sid    &trans  &trans  &trans
-&trans  &trans  &trans   &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans   &trans  &trans  &trans          &name   &trans  &trans  &trans  &trans  &trans
-                         &trans  &trans  &trans          &trans  &trans  &trans
+             bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans        &kp N7  &kp N8  &kp N9  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &kp N4  &kp N5  &kp N6  &kp N0  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &kp N1  &kp N2  &kp N3  &trans  &trans  &trans
+                        &trans  &trans  &trans        &trans  &trans  &trans
             >;
         };
     };

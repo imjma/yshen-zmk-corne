@@ -24,18 +24,6 @@
 
 / {
     behaviors {
-        ht: hold_tap {
-            label = "hold_tap";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
-        };
-
-        // timerless homerow mods
         thm: timerless_homerow_mods {
             label = "timerless_homerow_mods";
             compatible = "zmk,behavior-hold-tap";
@@ -48,7 +36,6 @@
             hold-trigger-on-release; // delay positional check until key-release
         };
 
-        // layer-tap for thumb keys
         mlt: my_layer_tap {
             label = "my_layer_tap";
             compatible = "zmk,behavior-hold-tap";
@@ -62,7 +49,6 @@
         };
 
         // tap-dance
-
         td_1: td_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_1";
@@ -88,26 +74,76 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_4";
             #binding-cells = <0>;
+            tapping-term-ms = <140>;
             bindings = <&mlt 1 BSPC>, <&kp LA(N4)>, <&kp LA(LS(N4))>;
         };
 
-        td_prev_ws: td_prev_ws {
+        td_q: td_q {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_PREV_WS";
+            label = "TD_Q";
             #binding-cells = <0>;
-            bindings = <&mt LGUI ESC>, <&kp LA(B)>;
-        };
-
-        td_next_ws: td_next_ws {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_NEXT_WS";
-            #binding-cells = <0>;
-            bindings = <&mt LALT DEL>, <&kp LA(N)>;
+            bindings = <&kp Q>, <&kp ESC>;
         };
     };
 
     combos {
         compatible = "zmk,combos";
+
+        combo_ws1 {
+            bindings = <&kp LA(N1)>;
+            key-positions = <1 2>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        combo_ws2 {
+            bindings = <&kp LA(N2)>;
+            key-positions = <2 3>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        combo_ws3 {
+            bindings = <&kp LA(N3)>;
+            key-positions = <3 4>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        combo_ws4 {
+            bindings = <&kp LA(N4)>;
+            key-positions = <4 5>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        combo_mws1 {
+            bindings = <&kp LA(LS(N1))>;
+            key-positions = <6 7>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        combo_mws2 {
+            bindings = <&kp LA(LS(N2))>;
+            key-positions = <7 8>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        combo_mws3 {
+            bindings = <&kp LA(LS(N3))>;
+            key-positions = <8 9>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        combo_mws4 {
+            bindings = <&kp LA(LS(N4))>;
+            key-positions = <9 10>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
 
         // [
         combo_lbkt {
@@ -141,33 +177,15 @@
             layers = <0>;
         };
 
-        // (
-        combo_lpar {
-            bindings = <&kp LPAR>;
-            key-positions = <4 5>; // rt
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        // )
-        combo_rpar {
-            bindings = <&kp RPAR>;
-            key-positions = <6 7>; // yu
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        // C-LEFT
-        combo_c_left {
-            bindings = <&kp LC(LEFT)>;
+        combo_a_b {
+            bindings = <&kp LA(B)>;
             key-positions = <19 20>; // jk
             timeout-ms = <50>;
             layers = <0>;
         };
 
-        // C-RIGHT
-        combo_c_right {
-            bindings = <&kp LC(RIGHT)>;
+        combo_a_n {
+            bindings = <&kp LA(N)>;
             key-positions = <20 21>; // kl
             timeout-ms = <50>;
             layers = <0>;
@@ -193,14 +211,6 @@
         combo_tab_next {
             bindings = <&kp LC(TAB)>;
             key-positions = <15 16>; // df
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        // ESC
-        combo_esc {
-            bindings = <&kp ESC>;
-            key-positions = <1 2>; // qw
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -422,8 +432,7 @@
 &kp TAB        &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &mt LCTRL ESC  HRML(A,    S,     D,        F) &kp G        &kp H   HRMR(J,     K,         L,       SEMI) &kp SQT
 &kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-//                         &mt LGUI ESC  &mlt 1 TAB  &kp SPACE    &kp RET  &mlt 2 BSPC  &mt LALT DEL
-                         &td_prev_ws  &td_1  &td_2        &td_3  &td_4  &td_next_ws
+                         &mt LGUI ESC  &mlt 1 TAB  &kp SPACE    &kp RET  &mlt 2 BSPC  &mt LALT DEL
             >;
         };
 

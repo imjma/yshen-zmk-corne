@@ -60,6 +60,50 @@
             bindings = <&mo>, <&kp>;
             hold-trigger-on-release; // delay positional check until key-release
         };
+
+        // tap-dance
+
+        td_1: td_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_1";
+            #binding-cells = <0>;
+            bindings = <&mlt 2 TAB>, <&kp LA(N1)>, <&kp LA(LS(N1))>;
+        };
+
+        td_2: td_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_2";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp LA(N2)>, <&kp LA(LS(N2))>;
+        };
+
+        td_3: td_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_3";
+            #binding-cells = <0>;
+            bindings = <&kp RET>, <&kp LA(N3)>, <&kp LA(LS(N3))>;
+        };
+
+        td_4: td_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_4";
+            #binding-cells = <0>;
+            bindings = <&mlt 1 BSPC>, <&kp LA(N4)>, <&kp LA(LS(N4))>;
+        };
+
+        td_prev_ws: td_prev_ws {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_PREV_WS";
+            #binding-cells = <0>;
+            bindings = <&mt LGUI ESC>, <&kp LA(B)>;
+        };
+
+        td_next_ws: td_next_ws {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_NEXT_WS";
+            #binding-cells = <0>;
+            bindings = <&mt LALT DEL>, <&kp LA(N)>;
+        };
     };
 
     combos {
@@ -378,7 +422,8 @@
 &kp TAB        &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &mt LCTRL ESC  HRML(A,    S,     D,        F) &kp G        &kp H   HRMR(J,     K,         L,       SEMI) &kp SQT
 &kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                         &mt LGUI ESC  &mlt 1 TAB  &kp SPACE    &kp RET  &mlt 2 BSPC  &mt LALT DEL
+//                         &mt LGUI ESC  &mlt 1 TAB  &kp SPACE    &kp RET  &mlt 2 BSPC  &mt LALT DEL
+                         &td_prev_ws  &td_1  &td_2        &td_3  &td_4  &td_next_ws
             >;
         };
 

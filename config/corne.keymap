@@ -47,103 +47,10 @@
             bindings = <&mo>, <&kp>;
             hold-trigger-on-release; // delay positional check until key-release
         };
-
-        // tap-dance
-        td_1: td_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_1";
-            #binding-cells = <0>;
-            bindings = <&mlt 2 TAB>, <&kp LA(N1)>, <&kp LA(LS(N1))>;
-        };
-
-        td_2: td_2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_2";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp LA(N2)>, <&kp LA(LS(N2))>;
-        };
-
-        td_3: td_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_3";
-            #binding-cells = <0>;
-            bindings = <&kp RET>, <&kp LA(N3)>, <&kp LA(LS(N3))>;
-        };
-
-        td_4: td_4 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_4";
-            #binding-cells = <0>;
-            tapping-term-ms = <140>;
-            bindings = <&mlt 1 BSPC>, <&kp LA(N4)>, <&kp LA(LS(N4))>;
-        };
-
-        td_q: td_q {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_Q";
-            #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp ESC>;
-        };
     };
 
     combos {
         compatible = "zmk,combos";
-
-        combo_ws1 {
-            bindings = <&kp LA(N1)>;
-            key-positions = <1 2>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_ws2 {
-            bindings = <&kp LA(N2)>;
-            key-positions = <2 3>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_ws3 {
-            bindings = <&kp LA(N3)>;
-            key-positions = <3 4>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_ws4 {
-            bindings = <&kp LA(N4)>;
-            key-positions = <4 5>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_mws1 {
-            bindings = <&kp LA(LS(N1))>;
-            key-positions = <6 7>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_mws2 {
-            bindings = <&kp LA(LS(N2))>;
-            key-positions = <7 8>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_mws3 {
-            bindings = <&kp LA(LS(N3))>;
-            key-positions = <8 9>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_mws4 {
-            bindings = <&kp LA(LS(N4))>;
-            key-positions = <9 10>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
 
         // [
         combo_lbkt {

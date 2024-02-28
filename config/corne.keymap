@@ -3,7 +3,6 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
 /*                                      42 KEY MATRIX / LAYOUT MAPPING
 
   ╭────────────────────────┬────────────────────────╮ ╭─────────────────────────┬─────────────────────────╮
@@ -16,9 +15,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-//#include <dt-bindings/zmk/mouse.h>
 
+//#include <dt-bindings/zmk/mouse.h>
 // Home row mods macro (CAGS for MacOS)
+
 #define HRML(k1,k2,k3,k4) &thm LCTRL k1  &thm LALT k2  &thm LGUI k3  &thm LSHFT k4
 #define HRMR(k1,k2,k3,k4) &thm RSHFT k1  &thm RGUI k2  &thm RALT k3  &thm RCTRL k4
 
@@ -33,6 +33,7 @@
             quick-tap-ms = <200>; // repeat on quick tap+hold
             require-prior-idle-ms = <120>; // disable hold-tap when typing quickly, remove input delay
             bindings = <&kp>, <&kp>;
+
             hold-trigger-on-release; // delay positional check until key-release
         };
 
@@ -45,6 +46,7 @@
             quick-tap-ms = <200>; // repeat on tap-into-hold
             require-prior-idle-ms = <120>; // disable hold-tap when typing quickly, remove input delay
             bindings = <&mo>, <&kp>;
+
             hold-trigger-on-release; // delay positional check until key-release
         };
     };
@@ -53,6 +55,7 @@
         compatible = "zmk,combos";
 
         // [
+
         combo_lbkt {
             bindings = <&kp LBKT>;
             key-positions = <28 29>; // vb
@@ -61,6 +64,7 @@
         };
 
         // ]
+
         combo_rbkt {
             bindings = <&kp RBKT>;
             key-positions = <30 31>; // nm
@@ -69,6 +73,7 @@
         };
 
         // {
+
         combo_lbrc {
             bindings = <&kp LBRC>;
             key-positions = <16 17>; // fg
@@ -77,6 +82,7 @@
         };
 
         // }
+
         combo_rbrc {
             bindings = <&kp RBRC>;
             key-positions = <18 19>; // hj
@@ -85,6 +91,7 @@
         };
 
         // C-SPC
+
         combo_c_spc {
             bindings = <&kp LC(SPACE)>;
             key-positions = <13 14>; // as
@@ -93,6 +100,7 @@
         };
 
         // C-S-TAB
+
         combo_tab_prev {
             bindings = <&kp LC(LS(TAB))>;
             key-positions = <14 15>; // sd
@@ -101,6 +109,7 @@
         };
 
         // C-TAB
+
         combo_tab_next {
             bindings = <&kp LC(TAB)>;
             key-positions = <15 16>; // df
@@ -109,6 +118,7 @@
         };
 
         // `
+
         combo_grave {
             bindings = <&kp GRAVE>;
             key-positions = <25 26>; // zx
@@ -117,6 +127,7 @@
         };
 
         // -
+
         combo_minus {
             bindings = <&kp MINUS>;
             key-positions = <26 27>;// xc
@@ -125,6 +136,7 @@
         };
 
         // _
+
         combo_under {
             bindings = <&kp UNDER>;
             key-positions = <27 28>;// cv
@@ -133,6 +145,7 @@
         };
 
         // =
+
         combo_equal {
             bindings = <&kp EQUAL>;
             key-positions = <31 32>;// m,
@@ -141,6 +154,7 @@
         };
 
         // +
+
         combo_plus {
             bindings = <&kp PLUS>;
             key-positions = <32 33>;// ,.
@@ -149,6 +163,7 @@
         };
 
         // ~
+
         combo_tilde {
             bindings = <&kp TILDE>;
             key-positions = <33 34>;// ,.
@@ -158,6 +173,7 @@
 
         // combos for macros
         // - [ ]
+
         combo_todo {
             bindings = <&todo>;
             key-positions = <17 18>; // gh
@@ -213,10 +229,17 @@
             timeout-ms = <50>;
             layers = <0>;
         };
+
+        combo_addr {
+            bindings = <&addr>;
+            key-positions = <4 13 15>;
+            timeout-ms = <50>;
+        };
     };
 
     macros {
         // - [ ]
+
         todo: todo {
             compatible = "zmk,behavior-macro";
             label = "TODO";
@@ -250,11 +273,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&kp LS(U) &kp N &kp I &kp V &kp E &kp R &kp S &kp I &kp T &kp Y &kp SPACE
-                        &kp O &kp F &kp SPACE
-                        &kp LS(T) &kp E &kp C &kp H &kp N &kp O &kp L &kp O &kp G &kp Y &kp SPACE
-                        &kp LS(S) &kp Y &kp D &kp N &kp E &kp Y
-                >;
+            bindings = <&kp LS(U) &kp N &kp I &kp V &kp E &kp R &kp S &kp I &kp T &kp Y &kp SPACE &kp O &kp F &kp SPACE &kp LS(T) &kp E &kp C &kp H &kp N &kp O &kp L &kp O &kp G &kp Y &kp SPACE &kp LS(S) &kp Y &kp D &kp N &kp E &kp Y>;
         };
 
         sid: sid {
@@ -292,6 +311,13 @@
             tap-ms = <10>;
             bindings = <&kp N1 &kp N5 &kp SPACE &kp LS(B) &kp R &kp O &kp A &kp D &kp W &kp A &kp Y &kp SPACE &kp LS(U) &kp L &kp T &kp I &kp M &kp O &kp COMMA &kp SPACE &kp LS(N) &kp LS(S) &kp LS(W) &kp SPACE &kp N2 &kp N0 &kp N0 &kp N7>;
         };
+
+        addr: addr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N4 &kp N8 &kp SPACE &kp LS(R) &kp E &kp D &kp M &kp Y &kp R &kp E &kp SPACE &kp LS(R) &kp D &kp COMMA &kp SPACE &kp LS(S) &kp T &kp R &kp A &kp T &kp H &kp F &kp I &kp E &kp L &kp D &kp SPACE &kp LS(N) &kp LS(S) &kp LS(W) &kp SPACE &kp N2 &kp N1 &kp N3 &kp N5>;
+            label = "ADDR";
+        };
     };
 
     keymap {
@@ -305,11 +331,10 @@
             //                        | GUI | MO1 | SPC |   | ENT | MO2  | MO4  |
 
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-//&mt LCTRL ESC  HRML(A,    S,     D,        F) &kp G        &kp H   HRMR(J,     K,         L,       SEMI) &kp SQT
-&mt LCTRL ESC &thm LCTRL A &thm LALT S &thm LGUI D &thm LSHFT F &kp H  &thm RSHFT J  &thm RGUI K  &thm RALT L  &thm RCTRL SEMI &kp SQT
-&kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                         &mt LGUI ESC  &mlt 1 TAB  &kp SPACE    &kp RET  &mlt 2 BSPC  &mt LALT SQT
+&kp TAB        &kp Q         &kp W        &kp E        &kp R         &kp T      &kp Y         &kp U         &kp I        &kp O            &kp P     &kp BSPC
+&mt LCTRL ESC  &thm LCTRL A  &thm LALT S  &thm LGUI D  &thm LSHFT F  &kp H      &thm RSHFT J  &thm RGUI K   &thm RALT L  &thm RCTRL SEMI  &kp SQT   &kp LSHFT
+&kp Z          &kp X         &kp C        &kp V        &kp B         &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH         &kp BSLH  &mt LGUI ESC
+                                          &mlt 1 TAB   &kp SPACE     &kp RET    &mlt 2 BSPC   &mt LALT SQT
             >;
         };
 
@@ -351,12 +376,10 @@
             //                    | GUI |     | SPC |   | ENTER |       |          |
 
             bindings = <
-&trans  &sys_reset   &kp N7  &kp N8  &kp N9  &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-//&trans  &bootloader  &kp N4  &kp N5  &kp N6  &kp N0        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT &trans  &trans
-//&trans  &bt BT_CLR   &kp N1  &kp N2  &kp N3  &trans        &trans &trans &msc SCROLL_UP &msc SCROLL_DOWN  &trans  &trans
-&trans  &bootloader  &kp N4  &kp N5  &kp N6  &kp N0        &trans &trans &trans &trans &trans &trans
-&trans  &bt BT_CLR   &kp N1  &kp N2  &kp N3  &trans        &trans &trans &trans &trans &trans &trans
-                             &trans  &trans  &trans        &trans  &trans  &trans
+&trans  &sys_reset   &kp N7  &kp N8  &kp N9  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&trans  &bootloader  &kp N4  &kp N5  &kp N6  &kp N0    &trans        &trans        &trans        &trans        &trans        &trans
+&trans  &bt BT_CLR   &kp N1  &kp N2  &kp N3  &trans    &trans        &trans        &trans        &trans        &trans        &trans
+                             &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
     };

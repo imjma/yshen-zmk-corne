@@ -16,7 +16,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+//#include <dt-bindings/zmk/mouse.h>
 
 // Home row mods macro (CAGS for MacOS)
 #define HRML(k1,k2,k3,k4) &thm LCTRL k1  &thm LALT k2  &thm LGUI k3  &thm LSHFT k4
@@ -343,8 +343,7 @@
             >;
         };
 
-        // use urob's zmk fork for mouse behaviors: mkp (mouse keypress), mmv (mouse move), mwh (mouse wheel)
-        NUMPAD_BT_MOUSE {
+        NUMPAD_BT {
             // -----------------------------------------------------------------------------------------
             // |   | RESET  |  7  |  8  |  9  |     |   | BT0   | BT1   | BT2      | BT3        | BT4 |    |
             // |   | BTLDR  |  4  |  5  |  6  |  0  |   | M_LFT | M_DWN | M_UP     | M_RGT      |     |    |
@@ -353,8 +352,10 @@
 
             bindings = <
 &trans  &sys_reset   &kp N7  &kp N8  &kp N9  &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&trans  &bootloader  &kp N4  &kp N5  &kp N6  &kp N0        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT &trans  &trans
-&trans  &bt BT_CLR   &kp N1  &kp N2  &kp N3  &trans        &trans &trans &msc SCROLL_UP &msc SCROLL_DOWN  &trans  &trans
+//&trans  &bootloader  &kp N4  &kp N5  &kp N6  &kp N0        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT &trans  &trans
+//&trans  &bt BT_CLR   &kp N1  &kp N2  &kp N3  &trans        &trans &trans &msc SCROLL_UP &msc SCROLL_DOWN  &trans  &trans
+&trans  &bootloader  &kp N4  &kp N5  &kp N6  &kp N0        &trans &trans &trans &trans &trans &trans
+&trans  &bt BT_CLR   &kp N1  &kp N2  &kp N3  &trans        &trans &trans &trans &trans &trans &trans
                              &trans  &trans  &trans        &trans  &trans  &trans
             >;
         };

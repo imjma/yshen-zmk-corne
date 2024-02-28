@@ -84,20 +84,6 @@
             layers = <0>;
         };
 
-        combo_ws_prev {
-            bindings = <&kp LG(B)>;
-            key-positions = <19 20>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_ws_next {
-            bindings = <&kp LG(N)>;
-            key-positions = <20 21>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
         // C-SPC
         combo_c_spc {
             bindings = <&kp LC(SPACE)>;
@@ -227,13 +213,6 @@
             timeout-ms = <50>;
             layers = <0>;
         };
-
-        combo_addr {
-            bindings = <&addr>;
-            key-positions = <4 13 15>; // rad
-            timeout-ms = <50>;
-            layers = <0>;
-        };
     };
 
     macros {
@@ -313,15 +292,6 @@
             tap-ms = <10>;
             bindings = <&kp N1 &kp N5 &kp SPACE &kp LS(B) &kp R &kp O &kp A &kp D &kp W &kp A &kp Y &kp SPACE &kp LS(U) &kp L &kp T &kp I &kp M &kp O &kp COMMA &kp SPACE &kp LS(N) &kp LS(S) &kp LS(W) &kp SPACE &kp N2 &kp N0 &kp N0 &kp N7>;
         };
-
-        addr: addr {
-            compatible = "zmk,behavior-macro";
-            label = "ADDRESS";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp N1 &kp FSLH &kp N3 &kp N1 &kp SPACE &kp LS(G) &kp O &kp R &kp D &kp O &kp N &kp SPACE &kp LS(S) &kp T &kp COMMA &kp SPACE &kp LS(B) &kp U &kp R &kp W &kp O &kp O &kp D &kp SPACE &kp LS(N) &kp LS(S) &kp LS(W) &kp SPACE &kp N2 &kp N1 &kp N3 &kp N4>;
-        };
     };
 
     keymap {
@@ -336,7 +306,8 @@
 
             bindings = <
 &kp TAB        &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&mt LCTRL ESC  HRML(A,    S,     D,        F) &kp G        &kp H   HRMR(J,     K,         L,       SEMI) &kp SQT
+//&mt LCTRL ESC  HRML(A,    S,     D,        F) &kp G        &kp H   HRMR(J,     K,         L,       SEMI) &kp SQT
+&mt LCTRL ESC &thm LCTRL A &thm LALT S &thm LGUI D &thm LSHFT F &kp H  &thm RSHFT J  &thm RGUI K  &thm RALT L  &thm RCTRL SEMI &kp SQT
 &kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
                          &mt LGUI ESC  &mlt 1 TAB  &kp SPACE    &kp RET  &mlt 2 BSPC  &mt LALT SQT
             >;
@@ -383,7 +354,7 @@
             bindings = <
 &trans  &sys_reset   &kp N7  &kp N8  &kp N9  &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
 &trans  &bootloader  &kp N4  &kp N5  &kp N6  &kp N0        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT &trans  &trans
-&trans  &bt BT_CLR   &kp N1  &kp N2  &kp N3  &trans        &mkp LCLK   &mkp RCLK  &mwh SCROLL_UP &mwh SCROLL_DOWN  &trans  &trans
+&trans  &bt BT_CLR   &kp N1  &kp N2  &kp N3  &trans        &trans &trans &msc SCROLL_UP &msc SCROLL_DOWN  &trans  &trans
                              &trans  &trans  &trans        &trans  &trans  &trans
             >;
         };

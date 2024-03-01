@@ -335,9 +335,9 @@
 
             bindings = <
 &kp TAB        &kp Q         &kp W        &kp E        &kp R         &kp T      &kp Y         &kp U         &kp I        &kp O            &kp P     &kp BSPC
-&mt LCTRL ESC  &thm LCTRL A  &thm LALT S  &thm LGUI D  &thm LSHFT F  &kp H      &thm RSHFT J  &thm RGUI K   &thm RALT L  &thm RCTRL SEMI  &kp SQT   &kp LSHFT
-&kp Z          &kp X         &kp C        &kp V        &kp B         &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH         &kp BSLH  &mt LGUI ESC
-                                          &mlt 1 TAB   &kp SPACE     &kp RET    &mlt 2 BSPC   &mt LALT SQT
+&mt LCTRL ESC  &thm LCTRL A  &thm LALT S  &thm LGUI D  &thm LSHFT F  &kp G  &kp H  &thm RSHFT J  &thm RGUI K   &thm RALT L  &thm RCTRL SEMI  &kp SQT
+&kp LSHFT    &kp Z          &kp X         &kp C        &kp V        &kp B         &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH         &kp BSLH
+&mt LGUI ESC  &mlt 1 TAB   &kp SPACE     &kp RET    &mlt 2 BSPC   &mt LALT SQT
             >;
         };
 

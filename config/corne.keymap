@@ -174,68 +174,68 @@
         // combos for macros
         // - [ ]
 
-        combo_todo {
-            bindings = <&todo>;
-            key-positions = <17 18>; // gh
-            layers = <0>;
-            timeout-ms = <50>;
-        };
-
-        combo_email {
-            bindings = <&email>;
-            key-positions = <3 31>; // em
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_name {
-            bindings = <&name>;
-            key-positions = <6 14>; // ys
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_uts {
-            bindings = <&uts>;
-            key-positions = <7 5 14>; // uts
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_sid {
-            bindings = <&sid>;
-            key-positions = <8 15>; // id
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_gmail {
-            bindings = <&gmail>;
-            key-positions = <17 31>; // gm
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_mobile {
-            bindings = <&mobile>;
-            key-positions = <5 3 21>; // tel
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_utsaddr {
-            bindings = <&utsaddr>;
-            key-positions = <7 13 15>; // uad
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_addr {
-            bindings = <&addr>;
-            key-positions = <4 13 15>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
+        // combo_todo {
+        //     bindings = <&todo>;
+        //     key-positions = <17 18>; // gh
+        //     layers = <0>;
+        //     timeout-ms = <50>;
+        // };
+        //
+        // combo_email {
+        //     bindings = <&email>;
+        //     key-positions = <3 31>; // em
+        //     timeout-ms = <50>;
+        //     layers = <0>;
+        // };
+        //
+        // combo_name {
+        //     bindings = <&name>;
+        //     key-positions = <6 14>; // ys
+        //     timeout-ms = <50>;
+        //     layers = <0>;
+        // };
+        //
+        // combo_uts {
+        //     bindings = <&uts>;
+        //     key-positions = <7 5 14>; // uts
+        //     timeout-ms = <50>;
+        //     layers = <0>;
+        // };
+        //
+        // combo_sid {
+        //     bindings = <&sid>;
+        //     key-positions = <8 15>; // id
+        //     timeout-ms = <50>;
+        //     layers = <0>;
+        // };
+        //
+        // combo_gmail {
+        //     bindings = <&gmail>;
+        //     key-positions = <17 31>; // gm
+        //     timeout-ms = <50>;
+        //     layers = <0>;
+        // };
+        //
+        // combo_mobile {
+        //     bindings = <&mobile>;
+        //     key-positions = <5 3 21>; // tel
+        //     timeout-ms = <50>;
+        //     layers = <0>;
+        // };
+        //
+        // combo_utsaddr {
+        //     bindings = <&utsaddr>;
+        //     key-positions = <7 13 15>; // uad
+        //     timeout-ms = <50>;
+        //     layers = <0>;
+        // };
+        //
+        // combo_addr {
+        //     bindings = <&addr>;
+        //     key-positions = <4 13 15>;
+        //     timeout-ms = <50>;
+        //     layers = <0>;
+        // };
     };
 
     macros {

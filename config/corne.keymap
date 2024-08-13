@@ -173,74 +173,16 @@
 
         // combos for macros
         // - [ ]
-
-        // combo_todo {
-        //     bindings = <&todo>;
-        //     key-positions = <17 18>; // gh
-        //     layers = <0>;
-        //     timeout-ms = <50>;
-        // };
-        //
-        // combo_email {
-        //     bindings = <&email>;
-        //     key-positions = <3 31>; // em
-        //     timeout-ms = <50>;
-        //     layers = <0>;
-        // };
-        //
-        // combo_name {
-        //     bindings = <&name>;
-        //     key-positions = <6 14>; // ys
-        //     timeout-ms = <50>;
-        //     layers = <0>;
-        // };
-        //
-        // combo_uts {
-        //     bindings = <&uts>;
-        //     key-positions = <7 5 14>; // uts
-        //     timeout-ms = <50>;
-        //     layers = <0>;
-        // };
-        //
-        // combo_sid {
-        //     bindings = <&sid>;
-        //     key-positions = <8 15>; // id
-        //     timeout-ms = <50>;
-        //     layers = <0>;
-        // };
-        //
-        // combo_gmail {
-        //     bindings = <&gmail>;
-        //     key-positions = <17 31>; // gm
-        //     timeout-ms = <50>;
-        //     layers = <0>;
-        // };
-        //
-        // combo_mobile {
-        //     bindings = <&mobile>;
-        //     key-positions = <5 3 21>; // tel
-        //     timeout-ms = <50>;
-        //     layers = <0>;
-        // };
-        //
-        // combo_utsaddr {
-        //     bindings = <&utsaddr>;
-        //     key-positions = <7 13 15>; // uad
-        //     timeout-ms = <50>;
-        //     layers = <0>;
-        // };
-        //
-        // combo_addr {
-        //     bindings = <&addr>;
-        //     key-positions = <4 13 15>;
-        //     timeout-ms = <50>;
-        //     layers = <0>;
-        // };
+        combo_todo {
+            bindings = <&todo>;
+            key-positions = <17 18>; // gh
+            layers = <0>;
+            timeout-ms = <50>;
+        };
     };
 
     macros {
         // - [ ]
-
         todo: todo {
             compatible = "zmk,behavior-macro";
             label = "TODO";
@@ -248,78 +190,6 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings = <&kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE>;
-        };
-
-        gmail: gmail {
-            compatible = "zmk,behavior-macro";
-            label = "GMAIL";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp Y &kp S &kp H &kp E &kp N &kp F &kp A &kp B &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
-        };
-
-        name: name {
-            compatible = "zmk,behavior-macro";
-            label = "YS";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&kp LS(Y) &kp A &kp N &kp G &kp SPACE &kp LS(S) &kp H &kp E &kp N>;
-        };
-
-        uts: uts {
-            compatible = "zmk,behavior-macro";
-            label = "UTS";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp LS(U) &kp N &kp I &kp V &kp E &kp R &kp S &kp I &kp T &kp Y &kp SPACE &kp O &kp F &kp SPACE &kp LS(T) &kp E &kp C &kp H &kp N &kp O &kp L &kp O &kp G &kp Y &kp SPACE &kp LS(S) &kp Y &kp D &kp N &kp E &kp Y>;
-        };
-
-        sid: sid {
-            compatible = "zmk,behavior-macro";
-            label = "SID";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&kp N1 &kp N3 &kp N9 &kp N4 &kp N6 &kp N6 &kp N1 &kp N9>;
-        };
-
-        email: email {
-            compatible = "zmk,behavior-macro";
-            label = "EMAIL";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp LS(Y) &kp A &kp N &kp G &kp DOT &kp LS(S) &kp H &kp E &kp N &kp MINUS &kp N9 &kp AT &kp S &kp T &kp U &kp D &kp E &kp N &kp T &kp DOT &kp U &kp T &kp S &kp DOT &kp E &kp D &kp U &kp DOT &kp A &kp U>;
-        };
-
-        mobile: mobile {
-            compatible = "zmk,behavior-macro";
-            label = "MOBILE";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&kp N0 &kp N4 &kp N7 &kp N8 &kp N2 &kp N4 &kp N8 &kp N5 &kp N4 &kp N9>;
-        };
-
-        utsaddr: utsaddr {
-            compatible = "zmk,behavior-macro";
-            label = "UTS_ADDRESS";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp N1 &kp N5 &kp SPACE &kp LS(B) &kp R &kp O &kp A &kp D &kp W &kp A &kp Y &kp SPACE &kp LS(U) &kp L &kp T &kp I &kp M &kp O &kp COMMA &kp SPACE &kp LS(N) &kp LS(S) &kp LS(W) &kp SPACE &kp N2 &kp N0 &kp N0 &kp N7>;
-        };
-
-        addr: addr {
-            compatible = "zmk,behavior-macro";
-            label = "ADDR";
-            #binding-cells = <0>;
-            wait-ms = <15>;
-            tap-ms = <15>;
-            bindings = <&kp N4 &kp N8 &kp SPACE &kp LS(R) &kp E &kp D &kp M &kp Y &kp R &kp E &kp SPACE &kp LS(R) &kp D &kp COMMA &kp SPACE &kp LS(S) &kp T &kp R &kp A &kp T &kp H &kp F &kp I &kp E &kp L &kp D &kp SPACE &kp LS(N) &kp LS(S) &kp LS(W) &kp SPACE &kp N2 &kp N1 &kp N3 &kp N5>;
         };
     };
 

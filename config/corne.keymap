@@ -173,16 +173,28 @@
 
         // combos for macros
         // - [ ]
+
         combo_todo {
             bindings = <&todo>;
             key-positions = <17 18>; // gh
             layers = <0>;
             timeout-ms = <50>;
         };
+
+        combo_copy {
+            bindings = <&none>;
+            key-positions = <27 15>;
+        };
+
+        combo_paste {
+            bindings = <&none>;
+            key-positions = <28 16>;
+        };
     };
 
     macros {
         // - [ ]
+
         todo: todo {
             compatible = "zmk,behavior-macro";
             label = "TODO";
@@ -204,10 +216,10 @@
             //                        | GUI | MO1 | SPC |   | ENT | MO2  | MO4  |
 
             bindings = <
-&kp TAB        &kp Q         &kp W        &kp E        &kp R         &kp T      &kp Y         &kp U         &kp I        &kp O            &kp P     &kp BSPC
-&mt LCTRL ESC  &thm LCTRL A  &thm LALT S  &thm LGUI D  &thm LSHFT F  &kp G  &kp H  &thm RSHFT J  &thm RGUI K   &thm RALT L  &thm RCTRL SEMI  &kp SQT
-&kp LSHFT    &kp Z          &kp X         &kp C        &kp V        &kp B         &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH         &kp BSLH
-&mt LGUI ESC  &mlt 1 TAB   &kp SPACE     &kp RET    &mlt 2 BSPC   &mt LALT SQT
+&kp TAB        &kp Q         &kp W        &kp E         &kp R         &kp T        &kp Y    &kp U         &kp I         &kp O        &kp P            &kp BSPC
+&mt LCTRL ESC  &thm LCTRL A  &thm LALT S  &thm LGUI D   &thm LSHFT F  &kp G        &kp H    &thm RSHFT J  &thm RGUI K   &thm RALT L  &thm RCTRL SEMI  &kp SQT
+&kp LSHFT      &kp Z         &kp X        &kp C         &kp V         &kp B        &kp N    &kp M         &kp COMMA     &kp DOT      &kp FSLH         &kp BSLH
+                                          &mt LGUI ESC  &mlt 1 TAB    &kp SPACE    &kp RET  &mlt 2 BSPC   &mt LALT SQT
             >;
         };
 
@@ -221,8 +233,7 @@
             bindings = <
 &kp CAPSLOCK  &kp F1           &kp F2        &kp F3      &kp F4                &kp F5                  &kp F6     &kp F7    &kp F8     &kp F9     &kp F10  &kp DELETE
 &kp LCTRL     &kp C_VOLUME_UP  &kp C_VOL_DN  &kp K_MUTE  &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC    &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &kp F11  &trans
-//&kp LSHFT     &kp C_PREV       &kp C_NEXT    &kp C_PLAY  &bt BT_PRV            &bt BT_NXT              &kp HOME   &kp END   &kp PG_UP  &kp PG_DN  &kp F12  &trans
-&kp LSHFT     &kp C_PREV       &kp C_NEXT    &kp C_PLAY  &trans  &trans              &kp HOME   &kp END   &kp PG_UP  &kp PG_DN  &kp F12  &trans
+&kp LSHFT     &kp C_PREV       &kp C_NEXT    &kp C_PLAY  &trans                &trans                  &kp HOME   &kp END   &kp PG_UP  &kp PG_DN  &kp F12  &trans
                                              &kp LGUI    &trans                &kp RETURN              &kp SPACE  &mo 3     &trans
             >;
         };
@@ -250,10 +261,10 @@
             //                    | GUI |     | SPC |   | ENTER |       |          |
 
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
-&trans  &bootloader  &trans  &trans  &trans  &trans        &trans &kp N4  &kp N5  &kp N6 &kp N0  &trans
-&trans  &bt BT_CLR   &trans  &trans  &trans  &trans        &trans &kp N1  &kp N2  &kp N3 &trans  &trans
-                             &trans  &trans  &trans    &trans        &trans        &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
+&trans  &bootloader   &trans        &trans        &trans        &trans          &trans  &kp N4  &kp N5  &kp N6  &kp N0  &trans
+&trans  &bt BT_CLR    &trans        &trans        &trans        &trans          &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+                                    &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
     };

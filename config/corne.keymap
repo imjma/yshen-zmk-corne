@@ -160,6 +160,16 @@
             bindings = <&kp TILDE>;
             key-positions = <21 22>;
         };
+
+        combo_lpar {
+            bindings = <&kp LPAR>;
+            key-positions = <4 5>;
+        };
+
+        combo_rpar {
+            bindings = <&kp RPAR>;
+            key-positions = <6 7>;
+        };
     };
 
     macros {

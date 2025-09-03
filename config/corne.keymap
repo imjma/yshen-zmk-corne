@@ -226,10 +226,10 @@
             //                    | GUI | MO3 | SPC |   | ENT |     |     |
 
             bindings = <
-&trans  &trans  &trans  &trans         &kp LS(LG(NUMBER_4))  &trans               &kp LG(GRAVE)  &trans    &trans  &trans     &trans  &kp DELETE
-&trans  &trans  &trans  &trans         &kp LA(LC(LEFT))      &kp LA(LC(RIGHT))    &kp LEFT       &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &kp LA(LC(C))  &trans                &kp LA(LC(RET))      &trans         &trans    &trans  &trans     &trans  &trans
-                        &kp LGUI       &mo 3                 &kp SPACE            &kp RET        &trans    &trans
+&trans  &trans  &trans  &trans              &kp LS(LG(NUMBER_4))  &trans               &kp LG(GRAVE)  &trans         &trans       &trans     &trans  &kp DELETE
+&trans  &trans  &trans  &kp LS(LA(LC(UP)))  &kp LA(LC(LEFT))      &kp LA(LC(RIGHT))    &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &kp LA(LC(C))       &trans                &kp LA(LC(RET))      &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &trans
+                        &kp LGUI            &mo 3                 &kp SPACE            &kp RET        &trans         &trans
             >;
         };
 

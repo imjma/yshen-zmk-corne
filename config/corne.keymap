@@ -110,16 +110,6 @@
             timeout-ms = <50>;
         };
 
-        combo_copy {
-            bindings = <&kp LG(C)>;
-            key-positions = <27 15>;
-        };
-
-        combo_paste {
-            bindings = <&kp LG(V)>;
-            key-positions = <28 16>;
-        };
-
         combo_pipe {
             bindings = <&kp PIPE>;
             key-positions = <34 35>;

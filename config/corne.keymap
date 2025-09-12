@@ -196,10 +196,10 @@
             //                        | GUI | MO1 | SPC |   | ENT | MO2  | MO4  |
 
             bindings = <
-&kp TAB        &kp Q         &kp W        &kp E         &kp R         &kp T        &kp Y    &kp U         &kp I           &kp O        &kp P            &kp BSPC
-&mt LCTRL ESC  &thm LCTRL A  &thm LALT S  &thm LGUI D   &thm LSHFT F  &kp G        &kp H    &thm RSHFT J  &thm RGUI K     &thm RALT L  &thm RCTRL SEMI  &kp SQT
-&kp LSHFT      &kp Z         &kp X        &kp C         &kp V         &kp B        &kp N    &kp M         &kp COMMA       &kp DOT      &kp FSLH         &kp BSLH
-                                          &mt LGUI ESC  &mlt 1 TAB    &kp SPACE    &kp RET  &mlt 2 BSPC   &mt LALT GRAVE
+&kp TAB        &kp Q         &kp W        &kp E         &kp R         &kp T        &kp Y              &kp U         &kp I           &kp O        &kp P            &kp BSPC
+&mt LCTRL ESC  &thm LCTRL A  &thm LALT S  &thm LGUI D   &thm LSHFT F  &kp G        &kp H              &thm RSHFT J  &thm RGUI K     &thm RALT L  &thm RCTRL SEMI  &kp SQT
+&kp LSHFT      &kp Z         &kp X        &kp C         &kp V         &kp B        &kp N              &kp M         &kp COMMA       &kp DOT      &kp FSLH         &kp BSLH
+                                          &mt LGUI ESC  &mlt 1 TAB    &kp SPACE    &mt RIGHT_GUI RET  &mlt 2 BSPC   &mt LALT GRAVE
             >;
         };
 
@@ -211,10 +211,10 @@
             //                          | GUI  |        | ENT    |    | SPC | MO3 |     |
 
             bindings = <
-&kp K_MUTE         &kp EXCL        &kp AT         &kp HASH      &kp DOLLAR  &kp PERCENT       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS    &trans  &kp DELETE
-&kp C_VOLUME_UP    &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp MINUS   &kp EQUAL         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS   &trans  &trans
-&kp C_VOLUME_DOWN  &kp UNDERSCORE  &kp TILDE      &kp GRAVE     &trans      &kp LEFT_SHIFT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans  &kp BACKSLASH
-                                                  &trans        &trans      &trans            &trans        &mo 3         &kp NUMBER_0
+&kp K_MUTE         &kp EXCL        &kp AT         &kp HASH      &kp DOLLAR  &kp PERCENT       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS    &kp ASTERISK   &kp DELETE
+&kp C_VOLUME_UP    &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp MINUS   &kp EQUAL         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS   &kp SLASH      &trans
+&kp C_VOLUME_DOWN  &kp UNDERSCORE  &kp TILDE      &kp GRAVE     &trans      &kp LEFT_SHIFT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &kp BACKSLASH  &trans
+                                                  &kp LGUI      &trans      &kp RETURN        &kp SPACE     &mo 3         &kp NUMBER_0
             >;
         };
 
@@ -226,10 +226,10 @@
             //                    | GUI | MO3 | SPC |   | ENT |     |     |
 
             bindings = <
-&trans                 &trans  &trans  &trans              &kp LS(LG(NUMBER_4))  &trans               &kp LG(GRAVE)  &trans         &trans       &trans     &trans  &kp DELETE
-&kp LG(LA(LC(LEFT)))   &trans  &trans  &kp LS(LA(LC(UP)))  &kp LA(LC(LEFT))      &kp LA(LC(RIGHT))    &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
-&kp LG(LA(LC(RIGHT)))  &trans  &trans  &kp LA(LC(C))       &trans                &kp LA(LC(RET))      &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &trans
-                                       &kp LGUI            &mo 3                 &kp SPACE            &kp RET        &trans         &trans
+&trans  &trans  &trans  &trans              &kp LS(LG(NUMBER_4))  &trans               &kp LG(GRAVE)  &trans         &trans       &trans     &trans  &kp DELETE
+&trans  &trans  &trans  &kp LS(LA(LC(UP)))  &kp LA(LC(LEFT))      &kp LA(LC(RIGHT))    &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &kp LA(LC(C))       &trans                &kp LA(LC(RET))      &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &trans
+                        &kp LGUI            &mo 3                 &kp SPACE            &kp RET        &trans         &trans
             >;
         };
 

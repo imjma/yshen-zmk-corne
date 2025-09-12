@@ -54,16 +54,12 @@
     combos {
         compatible = "zmk,combos";
 
-        // [
-
         combo_lbkt {
             bindings = <&kp LBKT>;
             key-positions = <28 29>; // vb
             timeout-ms = <50>;
             layers = <0>;
         };
-
-        // ]
 
         combo_rbkt {
             bindings = <&kp RBKT>;
@@ -72,16 +68,12 @@
             layers = <0>;
         };
 
-        // {
-
         combo_lbrc {
             bindings = <&kp LBRC>;
             key-positions = <16 17>; // fg
             timeout-ms = <50>;
             layers = <0>;
         };
-
-        // }
 
         combo_rbrc {
             bindings = <&kp RBRC>;
@@ -90,25 +82,12 @@
             layers = <0>;
         };
 
-        // C-SPC
-
-        combo_c_spc {
-            bindings = <&kp LC(SPACE)>;
-            key-positions = <13 14>; // as
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        // C-S-TAB
-
         combo_tab_prev {
             bindings = <&kp LC(LS(TAB))>;
             key-positions = <14 15>; // sd
             timeout-ms = <50>;
             layers = <0>;
         };
-
-        // C-TAB
 
         combo_tab_next {
             bindings = <&kp LC(TAB)>;
@@ -117,22 +96,12 @@
             layers = <0>;
         };
 
-        // `
-        // -
-        // _
-        // =
-        // +
-        // ~
-
         combo_back {
             bindings = <&kp BACKSLASH>;
             key-positions = <33 34>;// ,.
             timeout-ms = <50>;
             layers = <0>;
         };
-
-        // combos for macros
-        // - [ ]
 
         combo_todo {
             bindings = <&todo>;
@@ -189,12 +158,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB     |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I   |  O    |  P    | BKSP |
-            // | CTRL/ESC |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K   |  L    |  ; :  |  ' " |
-            // | SHIFT    |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  , < |  . >  |  / ?  |  \ | |
-            //                        | GUI | MO1 | SPC |   | ENT | MO2  | MO4  |
-
             bindings = <
 &kp TAB        &kp Q         &kp W        &kp E         &kp R         &kp T        &kp Y              &kp U         &kp I           &kp O        &kp P            &kp BSPC
 &mt LCTRL ESC  &thm LCTRL A  &thm LALT S  &thm LGUI D   &thm LSHFT F  &kp G        &kp H              &thm RSHFT J  &thm RGUI K     &thm RALT L  &thm RCTRL SEMI  &kp SQT
@@ -204,12 +167,6 @@
         };
 
         FN_NAV {
-            // -----------------------------------------------------------------------------------------
-            // | CAPS | F1     | F2     | F3   | F4     | F5     |    | F6  | F7  | F8    | F9    | F10 | DEL |
-            // | CTRL | VOL_UP | VOL_DN | MUTE | BRI_UP | BRI_DN |    | LFT | DWN | UP    | RGT   | F11 |     |
-            // | SHIFT | PREV   | NEXT  | PLAY | BT_PRV | BT_NXT |    | HME | END | PG_UP | PG_DN | F12 |     |
-            //                          | GUI  |        | ENT    |    | SPC | MO3 |     |
-
             bindings = <
 &kp K_MUTE         &kp EXCL        &kp AT         &kp HASH      &kp DOLLAR  &kp PERCENT       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS    &kp ASTERISK   &kp DELETE
 &kp C_VOLUME_UP    &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp MINUS   &kp EQUAL         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS   &kp SLASH      &trans
@@ -219,31 +176,19 @@
         };
 
         NUM_SYM {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | CTRL |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
-            // | SHIFT|  `  |  -  |  _  |  \  |  |  |   |  '  |  "  |  =  |  +  |  ~  |      |
-            //                    | GUI | MO3 | SPC |   | ENT |     |     |
-
             bindings = <
-&trans  &trans  &trans  &trans              &kp LS(LG(NUMBER_4))  &trans               &kp LG(GRAVE)  &trans         &trans       &trans     &trans  &kp DELETE
-&trans  &trans  &trans  &kp LS(LA(LC(UP)))  &kp LA(LC(LEFT))      &kp LA(LC(RIGHT))    &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &kp LA(LC(C))       &trans                &kp LA(LC(RET))      &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &trans
-                        &kp LGUI            &mo 3                 &kp SPACE            &kp RET        &trans         &trans
+&trans                 &trans  &trans  &trans              &kp LS(LG(NUMBER_4))  &trans               &kp LG(GRAVE)  &trans         &trans       &trans     &trans  &kp DELETE
+&kp LG(LC(LA(LEFT)))   &trans  &trans  &kp LS(LA(LC(UP)))  &kp LA(LC(LEFT))      &kp LA(LC(RIGHT))    &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
+&kp LC(LA(LG(RIGHT)))  &trans  &trans  &kp LA(LC(C))       &trans                &kp LA(LC(RET))      &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &trans
+                                       &kp LGUI            &mo 3                 &kp SPACE            &kp RET        &trans         &trans
             >;
         };
 
         NUMPAD_BT {
-            // -----------------------------------------------------------------------------------------
-            // |   | RESET  |  7  |  8  |  9  |     |   | BT0   | BT1   | BT2      | BT3        | BT4 |    |
-            // |   | BTLDR  |  4  |  5  |  6  |  0  |   | M_LFT | M_DWN | M_UP     | M_RGT      |     |    |
-            // |   | BT_CLR |  1  |  2  |  3  |     |   |  MB1  |  MB2  | WHEEL_UP | WHEEL_DOWN |     |    |
-            //                    | GUI |     | SPC |   | ENTER |       |          |
-
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
-&trans  &bootloader   &trans        &trans        &trans        &trans          &trans  &kp N4  &kp N5  &kp N6  &kp N0  &trans
-&trans  &bt BT_CLR    &trans        &trans        &trans        &trans          &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bootloader   &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_CLR    &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                     &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };

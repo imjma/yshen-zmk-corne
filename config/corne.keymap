@@ -158,10 +158,10 @@
 
         FN_NAV {
             bindings = <
-&kp K_MUTE         &kp EXCL        &kp AT         &kp HASH      &kp DOLLAR  &kp PERCENT       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS    &kp ASTERISK   &kp DELETE
-&kp C_VOLUME_UP    &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp MINUS   &kp EQUAL         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS   &kp SLASH      &trans
-&kp C_VOLUME_DOWN  &kp UNDERSCORE  &kp TILDE      &kp GRAVE     &trans      &kp LEFT_SHIFT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &kp BACKSLASH  &trans
-                                                  &kp LGUI      &trans      &kp SPACE         &kp RET       &mo 3         &kp NUMBER_0
+&kp K_MUTE         &kp EXCL        &kp AT         &kp HASH      &kp DOLLAR  &kp PERCENT       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans  &kp DELETE
+&kp C_VOLUME_UP    &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp MINUS   &kp EQUAL         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans  &trans
+&kp C_VOLUME_DOWN  &kp UNDERSCORE  &kp TILDE      &kp GRAVE     &trans      &kp LEFT_SHIFT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans  &trans
+                                                  &kp LGUI      &trans      &kp SPACE         &kp RET       &mo 3         &trans
             >;
         };
 

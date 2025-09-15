@@ -129,6 +129,16 @@
             bindings = <&kp RPAR>;
             key-positions = <6 7>;
         };
+
+        combo_grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <22 23>;
+        };
+
+        combo_input {
+            bindings = <&kp LA(LC(SPACE))>;
+            key-positions = <0 1>;
+        };
     };
 
     macros {
@@ -158,9 +168,9 @@
 
         FN_NAV {
             bindings = <
-&kp K_MUTE         &kp EXCL        &kp AT         &kp HASH      &kp DOLLAR  &kp PERCENT       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans  &kp DELETE
-&kp C_VOLUME_UP    &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp MINUS   &kp EQUAL         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans  &trans
-&kp C_VOLUME_DOWN  &kp UNDERSCORE  &kp TILDE      &kp GRAVE     &trans      &kp LEFT_SHIFT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans  &trans
+&kp K_MUTE         &kp EXCL        &kp AT         &kp HASH      &kp DOLLAR  &kp PERCENT       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS      &kp MINUS  &kp DELETE
+&kp C_VOLUME_UP    &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp MINUS   &kp EQUAL         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &kp COLON  &trans
+&kp C_VOLUME_DOWN  &kp UNDERSCORE  &kp TILDE      &kp GRAVE     &trans      &kp LEFT_SHIFT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp SLASH  &trans
                                                   &kp LGUI      &trans      &kp SPACE         &kp RET       &mo 3         &trans
             >;
         };

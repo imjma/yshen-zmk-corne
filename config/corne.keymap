@@ -139,11 +139,6 @@
             bindings = <&kp LA(LC(SPACE))>;
             key-positions = <0 1>;
         };
-
-        combo_esc {
-            bindings = <&kp ESC>;
-            key-positions = <19 20>;
-        };
     };
 
     macros {
@@ -164,10 +159,10 @@
 
         default_layer {
             bindings = <
-&kp TAB        &kp Q         &kp W        &kp E         &kp R         &kp T        &kp Y              &kp U         &kp I           &kp O        &kp P            &kp BSPC
-&mt LCTRL ESC  &thm LCTRL A  &thm LALT S  &thm LGUI D   &thm LSHFT F  &kp G        &kp H              &thm RSHFT J  &thm RGUI K     &thm RALT L  &thm RCTRL SEMI  &kp SQT
-&kp LSHFT      &kp Z         &kp X        &kp C         &kp V         &kp B        &kp N              &kp M         &kp COMMA       &kp DOT      &kp FSLH         &kp BSLH
-                                          &mt LGUI ESC  &mlt 1 TAB    &kp SPACE    &mt RIGHT_GUI RET  &mlt 2 BSPC   &mt LALT GRAVE
+&kp TAB        &kp Q         &kp W        &kp E         &kp R         &kp T        &kp Y              &kp U         &kp I                  &kp O        &kp P            &kp BSPC
+&mt LCTRL ESC  &thm LCTRL A  &thm LALT S  &thm LGUI D   &thm LSHFT F  &kp G        &kp H              &thm RSHFT J  &thm RGUI K            &thm RALT L  &thm RCTRL SEMI  &kp SQT
+&kp LSHFT      &kp Z         &kp X        &kp C         &kp V         &kp B        &kp N              &kp M         &kp COMMA              &kp DOT      &kp FSLH         &kp BSLH
+                                          &mt LGUI ESC  &mlt 1 TAB    &kp SPACE    &mt RIGHT_GUI RET  &mlt 2 BSPC   &mt RIGHT_SHIFT GRAVE
             >;
         };
 
@@ -182,9 +177,9 @@
 
         NUM_SYM {
             bindings = <
-&trans  &trans                 &trans  &trans              &kp LS(LG(NUMBER_4))  &trans               &kp LG(GRAVE)    &kp END        &kp HOME     &trans     &trans  &kp DELETE
-&trans  &kp LG(LC(LA(LEFT)))   &trans  &kp LS(LA(LC(UP)))  &kp LA(LC(LEFT))      &kp LA(LC(RIGHT))    &kp LEFT         &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
-&trans  &kp LC(LA(LG(RIGHT)))  &trans  &kp LA(LC(C))       &trans                &kp LA(LC(RET))      &kp RIGHT_SHIFT  &kp PAGE_DOWN  &kp PAGE_UP  &trans     &trans  &trans
+&trans  &trans                 &trans  &trans              &kp LS(LG(NUMBER_4))  &trans               &kp LG(GRAVE)    &kp END        &kp HOME     &kp LG(TAB)  &trans  &kp DELETE
+&trans  &kp LG(LC(LA(LEFT)))   &trans  &kp LS(LA(LC(UP)))  &kp LA(LC(LEFT))      &kp LA(LC(RIGHT))    &kp LEFT         &kp DOWN       &kp UP       &kp RIGHT    &trans  &trans
+&trans  &kp LC(LA(LG(RIGHT)))  &trans  &kp LA(LC(C))       &trans                &kp LA(LC(RET))      &kp RIGHT_SHIFT  &kp PAGE_DOWN  &kp PAGE_UP  &trans       &trans  &trans
                                        &kp LGUI            &mo 3                 &kp SPACE            &kp RET          &trans         &trans
             >;
         };

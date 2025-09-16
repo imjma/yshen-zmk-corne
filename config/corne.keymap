@@ -139,6 +139,11 @@
             bindings = <&kp LA(LC(SPACE))>;
             key-positions = <0 1>;
         };
+
+        combo_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
+        };
     };
 
     macros {
@@ -168,10 +173,10 @@
 
         FN_NAV {
             bindings = <
-&kp K_MUTE         &kp MINUS       &kp PLUS   &kp AMPS    &kp ASTRK    &kp GRAVE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS    &kp BACKSLASH  &kp DELETE
-&kp C_VOLUME_UP    &kp UNDER       &kp TILDE  &kp DOLLAR  &kp PERCENT  &kp CARET    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS   &kp COLON      &trans
-&kp C_VOLUME_DOWN  &kp LEFT_SHIFT  &kp PIPE   &kp EXCL    &kp AT       &kp HASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &kp SLASH      &trans
-                                              &kp LGUI    &trans       &kp SPACE    &kp NUMBER_0  &mo 3         &trans
+&kp K_MUTE         &kp MINUS     &kp EQUAL  &kp AMPS    &kp ASTRK    &kp GRAVE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS    &kp BACKSLASH  &kp DELETE
+&kp C_VOLUME_UP    &kp UNDER     &kp TILDE  &kp DOLLAR  &kp PERCENT  &kp CARET    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS   &kp COLON      &trans
+&kp C_VOLUME_DOWN  &kp LEFT_GUI  &kp PIPE   &kp EXCL    &kp AT       &kp HASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &kp SLASH      &trans
+                                            &kp LCTRL   &trans       &kp SPACE    &kp NUMBER_0  &mo 3         &trans
             >;
         };
 
